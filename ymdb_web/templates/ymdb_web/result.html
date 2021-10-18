@@ -1,0 +1,17 @@
+{% extends 'ymdb_web/base.html' %}
+
+{% block title %}
+  搜索结果
+{% endblock %}
+
+{% block content %}
+<div id='write' class=''>
+    <h1 id='title'><span>搜索结果</span></h1>
+    <br>
+{% for manga in manga_list %}
+    <h2><span><a href="{{ manga.link }}" style="text-decoration: none">{{ manga.manga_id }} {{manga.title}}</a></span></h2>
+    <p><span>{{ manga.brief }}</span></p>
+    <hr style="background: #B8BFC6; height: 2px" />
+{% endfor %}
+</div>
+{% endblock %}

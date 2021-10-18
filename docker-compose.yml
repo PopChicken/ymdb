@@ -1,0 +1,16 @@
+# YMDB 服务
+version: "3"
+services:
+  ymdb:
+    build: .
+    image: yoz/ymdb
+    ports:
+      - "8000:8000"
+    links:
+      - frpc
+    container_name: ymdb
+  frpc:
+    image: snowdreamtech/frpc
+    volumes:
+      - ./frpc.ini:/etc/frp/frpc.ini
+    container_name: ymdb_frpc

@@ -1,0 +1,31 @@
+{% extends "ymdb_web/base.html" %}
+
+{% block title %}
+  {{ title }}
+{% endblock %}
+
+{% block content %}
+<div id="write" class="">
+    <h1 id="title"><span>{{ title }}</span></h1>
+    <span>编号 {{ id }}&ensp;</span>
+{% for tag in tags %}
+    <span class="badge bg-primary">{{ tag }}</span>
+    &ensp;
+{% endfor %}
+    <hr style="background: #B8BFC6; height: 2px" />
+{% if thumbnail != "" %}
+    <div class="img-box"><div class="img-box-item">
+        <img title="缩略图" class="img-responsive" src="{{ thumbnail }}"/>
+    </div></div>
+    <br>
+{% endif %}
+    <h2 id="author"><span>作者</span></h2>
+    <p><span>{{ author }}</span></p>
+    <h2 id="brief"><span>简介</span></h2>
+    <p><span>{{ brief }}</span></p>
+    <h2 id="preview"><span>预览</span></h2>
+    <!--p><span>[pic1]</span></p-->
+    <!--p><span>[pic2]</span></p-->
+    <!--p><span>[pic3]</span></p-->
+</div>
+{% endblock %}
