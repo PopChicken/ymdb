@@ -128,8 +128,8 @@ ROOT_HOSTCONF = 'ymdb_site.hosts'
 DEFAULT_HOST = 'web'
 
 
-REQ_KEY = 'rM253rF7CGy6tV8J'
+REQ_KEY = 'abcdefghabcdefgh'
 REQ_EXPIRE_IN = 10 * 60
 
 
-AUTH_KEY = 'c8jcrf3no3fy0yc5pyvf33uison'
+AUTH_KEY = 'abcdefghabcdefghabcdefghabcdefgh' # for JWT
